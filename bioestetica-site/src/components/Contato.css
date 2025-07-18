@@ -1,0 +1,27 @@
+.contato {
+  padding: 2rem 0;
+  text-align: center;
+}
+.contato h2 {
+  color: #b38b59;
+  margin-bottom: 1.5rem;
+}
+.contato ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+.contato li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+.contato a {
+  color: #b38b59;
+  text-decoration: none;
+  font-weight: 500;
+}
+.contato a:hover {
+  text-decoration: underline;
+}

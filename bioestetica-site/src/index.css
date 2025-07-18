@@ -1,0 +1,63 @@
+:root {
+  --cor-bg: #f7f4ef;
+  --cor-bg-card: #fff;
+  --cor-bg-hero: linear-gradient(135deg, #b7a89a 0%, #e5ded6 100%);
+  --cor-marrom: #9b7a5a;
+  --cor-marrom-escuro: #7c5a3a;
+  --cor-bege: #e2cdb1;
+  --cor-dourado: #b38b59;
+  --cor-texto: #7c5a3a;
+  --cor-texto-claro: #e2cdb1;
+  --cor-footer: #5a4732;
+}
+
+body,
+html,
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: var(--cor-bg);
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--cor-texto);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section,
+header,
+footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", "Georgia", serif;
+  color: var(--cor-marrom-escuro);
+  margin: 0;
+}
+a {
+  color: var(--cor-marrom);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--cor-dourado);
+}
+button {
+  font-family: "Montserrat", Arial, sans-serif;
+}

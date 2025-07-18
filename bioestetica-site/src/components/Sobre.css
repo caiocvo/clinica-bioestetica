@@ -1,0 +1,129 @@
+.sobre {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  padding: 4rem 0 3rem 0;
+  background: #f7f4ef;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sobre-img-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 420px;
+  max-width: 520px;
+}
+.sobre-capa {
+  width: 420px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 2.5rem;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+}
+.sobre-avatar {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid #f7f4ef;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  background: #fff;
+}
+.sobre-texto-area {
+  flex: 1;
+  min-width: 320px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.sobre-titulo {
+  font-family: "Playfair Display", "Georgia", serif;
+  color: #a88b6a;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+.sobre-desc {
+  color: #7c5a3a;
+  font-size: 1.18rem;
+  margin-bottom: 2.2rem;
+  line-height: 1.6;
+}
+.sobre-cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.sobre-card {
+  background: #f2ebe2;
+  border-radius: 12px;
+  padding: 1.2rem 2.2rem 1rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.sobre-card span {
+  color: #a88b6a;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.sobre-card small {
+  color: #7c5a3a;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .sobre {
+    flex-direction: column;
+    gap: 2.2rem;
+    padding: 2.5rem 0 2rem 0;
+  }
+  .sobre-img-area {
+    min-width: 0;
+    max-width: 98vw;
+  }
+  .sobre-capa {
+    width: 95vw;
+    height: 260px;
+    border-radius: 1.5rem;
+  }
+  .sobre-avatar {
+    width: 100px;
+    height: 100px;
+    right: 12px;
+    bottom: 12px;
+    border-width: 5px;
+  }
+  .sobre-texto-area {
+    max-width: 98vw;
+    min-width: 0;
+    align-items: flex-start;
+  }
+  .sobre-titulo {
+    font-size: 2rem;
+  }
+  .sobre-cards {
+    gap: 1rem;
+  }
+  .sobre-card {
+    min-width: 110px;
+    padding: 0.8rem 1.1rem 0.7rem 1.1rem;
+  }
+  .sobre-card span {
+    font-size: 1.3rem;
+  }
+  .sobre-card small {
+    font-size: 0.98rem;
+  }
+}
