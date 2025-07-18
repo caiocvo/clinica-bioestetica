@@ -1,5 +1,5 @@
 .servicos {
-  background: #f7f4ef;
+  background: var(--cor-bg);
   padding: 3.5rem 0;
   min-height: 100vh;
 }
@@ -13,40 +13,55 @@
 }
 .servico-card {
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(139, 106, 83, 0.07);
+  padding: 2.2rem 1.7rem 1.7rem 1.7rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   min-height: 260px;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
+  font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
 }
 .servico-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 8px 32px rgba(139, 106, 83, 0.13);
+  transform: translateY(-6px) scale(1.025);
+  z-index: 2;
 }
 .servico-icone {
   margin-bottom: 1.2rem;
-  color: #a88b6a;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 56px;
+}
+.servico-icone-img {
+  max-width: 48px;
+  max-height: 48px;
+  margin-bottom: 1.1rem;
+  border-radius: 8px;
+  background: #f8f6f5;
+  padding: 0.3rem;
+  box-shadow: 0 1px 4px rgba(139, 106, 83, 0.06);
 }
 .servico-titulo {
-  font-family: "Playfair Display", "Georgia", serif;
+  font-family: "Segoe UI Semibold", "Roboto", "Arial", sans-serif;
   font-size: 1.35rem;
-  color: #a88b6a;
-  font-weight: bold;
+  color: var(--cor-marrom-escuro);
+  font-weight: 600;
   margin: 0 0 0.7rem 0;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
 }
 .servico-desc {
-  color: #7c5a3a;
-  font-size: 1.08rem;
-  margin-bottom: 1.5rem;
+  color: var(--cor-texto);
+  font-size: 1.05rem;
+  margin-bottom: 1.3rem;
   line-height: 1.5;
+  font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
 }
 .servico-link {
-  color: #a88b6a;
+  color: var(--cor-marrom-escuro);
   font-weight: 600;
   font-size: 1.08rem;
   text-decoration: none;
@@ -55,13 +70,31 @@
   gap: 0.3rem;
   margin-top: auto;
   transition: color 0.2s;
+  font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
 }
 .servico-link span {
   font-size: 1.2em;
   margin-left: 0.1em;
 }
 .servico-link:hover {
-  color: #b38b59;
+  color: var(--cor-rose);
+}
+.servicos-titulo {
+  font-family: "Segoe UI Semibold", "Roboto", "Arial", sans-serif;
+  color: var(--cor-marrom-escuro);
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+}
+.servicos-subtitulo {
+  color: var(--cor-marrom-escuro);
+  font-size: 1.13rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+  letter-spacing: 0.01em;
 }
 @media (max-width: 1000px) {
   .servicos-grid {

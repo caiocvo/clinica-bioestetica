@@ -48,7 +48,6 @@ export default function Depoimentos() {
   const [index, setIndex] = useState(0);
   const isMobile = typeof window !== "undefined" && window.innerWidth < 900;
 
-  // Para mobile: mostra só 1, para desktop: mostra todos
   let visiveis;
   if (isMobile) {
     visiveis = [depoimentos[index]];
@@ -63,6 +62,10 @@ export default function Depoimentos() {
 
   return (
     <section id="depoimentos" className="depoimentos">
+      <h2 className="depoimentos-titulo">Depoimentos</h2>
+      <p className="depoimentos-subtitulo">
+        O que nossos clientes dizem sobre os tratamentos e resultados.
+      </p>
       <div className="depoimentos-container">
         <button
           className="depoimentos-seta"

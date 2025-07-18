@@ -1,27 +1,110 @@
 .contato {
-  padding: 2rem 0;
-  text-align: center;
+  background: var(--cor-bg);
+  padding: 3.5rem 0;
 }
-.contato h2 {
-  color: #b38b59;
-  margin-bottom: 1.5rem;
+.contato-container {
+  display: flex;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
-.contato ul {
+.contato-form,
+.contato-info {
+  background: var(--cor-bg-card);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(139, 106, 83, 0.1);
+  padding: 2.2rem 2rem 2rem 2rem;
+  min-width: 340px;
+  max-width: 480px;
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.contato-form label {
+  font-size: 1.05rem;
+  color: var(--cor-marrom-escuro);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.contato-form input,
+.contato-form select,
+.contato-form textarea {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--cor-rose-claro);
+  border-radius: 8px;
+  background: var(--cor-bg);
+  color: var(--cor-marrom-escuro);
+  outline: none;
+  transition: border 0.2s;
+  margin-top: 0.2rem;
+}
+.contato-form input:focus,
+.contato-form select:focus,
+.contato-form textarea:focus {
+  border-color: var(--cor-marrom);
+}
+.contato-form button {
+  background: var(--cor-marrom);
+  color: var(--cor-bg-card);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 0;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+.contato-form button:hover {
+  background: var(--cor-rose);
+}
+.contato-info h3 {
+  font-family: "Playfair Display", "Georgia", serif;
+  color: var(--cor-rose);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.1rem;
+}
+.contato-info ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  max-width: 400px;
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--cor-marrom-escuro);
 }
-.contato li {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: #333;
+.contato-info ul li {
+  margin-bottom: 1.1rem;
 }
-.contato a {
-  color: #b38b59;
+.contato-info a {
+  color: var(--cor-marrom);
   text-decoration: none;
   font-weight: 500;
 }
-.contato a:hover {
+.contato-info a:hover {
   text-decoration: underline;
+  color: var(--cor-rose);
+}
+@media (max-width: 900px) {
+  .contato-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .contato-form,
+  .contato-info {
+    min-width: 0;
+    max-width: 98vw;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
 }

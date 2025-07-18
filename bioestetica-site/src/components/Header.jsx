@@ -7,14 +7,10 @@ export default function Header() {
     <header className="header">
       <div className="header-left">
         <img
-          src="/images/logo.jpg"
+          src="/images/logo-removebg.png"
           alt="Logo Clínica Corpo e Pele"
           className="logo"
         />
-        <div className="header-title-group">
-          <span className="header-title">Josiane Sousa</span>
-          <span className="header-subtitle">Biomédica Esteta</span>
-        </div>
       </div>
       <button
         className="menu-toggle"

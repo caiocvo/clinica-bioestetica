@@ -41,21 +41,6 @@ export default function Footer() {
             <li>Harmonização Facial</li>
           </ul>
         </div>
-        <div className="footer-col">
-          <h4>Newsletter</h4>
-          <p>Inscreva-se para receber dicas de beleza e novidades.</p>
-          <form
-            className="footer-newsletter"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <input type="email" placeholder="Seu e-mail" />
-            <button type="submit" aria-label="Inscrever-se">
-              <svg width="22" height="22" fill="#fff" viewBox="0 0 24 24">
-                <path d="M2 21l21-9-21-9v7l15 2-15 2z" />
-              </svg>
-            </button>
-          </form>
-        </div>
       </div>
       <div className="footer-bottom">
         <div className="footer-social">

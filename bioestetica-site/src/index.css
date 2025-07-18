@@ -1,14 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap");
+
 :root {
-  --cor-bg: #f7f4ef;
-  --cor-bg-card: #fff;
-  --cor-bg-hero: linear-gradient(135deg, #b7a89a 0%, #e5ded6 100%);
-  --cor-marrom: #9b7a5a;
-  --cor-marrom-escuro: #7c5a3a;
-  --cor-bege: #e2cdb1;
-  --cor-dourado: #b38b59;
-  --cor-texto: #7c5a3a;
-  --cor-texto-claro: #e2cdb1;
-  --cor-footer: #5a4732;
+  --cor-bg: #fff;
+  --cor-bg-card: #f8f6f5;
+  --cor-bg-hero: linear-gradient(135deg, #f8f6f5 0%, #fff 100%);
+  --cor-marrom: #8c7a7a;
+  --cor-marrom-escuro: #4a3a3a;
+  --cor-rose: #d2a7a7;
+  --cor-rose-claro: #e2bdbd;
+  --cor-bege: #f3e3df;
+  --cor-cinza: #b3b3b3;
+  --cor-cinza-claro: #e3e2e5;
+  --cor-footer: #4a3a3a;
+  --cor-texto: #4a3a3a;
+  --cor-texto-claro: #b3b3b3;
 }
 
 body,
