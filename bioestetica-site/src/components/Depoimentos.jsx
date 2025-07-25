@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Depoimentos.css";
 
 const depoimentos = [
@@ -46,7 +46,16 @@ function Estrelas() {
 
 export default function Depoimentos() {
   const [index, setIndex] = useState(0);
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 900;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 900);
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   let visiveis;
   if (isMobile) {
@@ -67,13 +76,15 @@ export default function Depoimentos() {
         O que nossos clientes dizem sobre os tratamentos e resultados.
       </p>
       <div className="depoimentos-container">
-        <button
-          className="depoimentos-seta"
-          onClick={anterior}
-          aria-label="Anterior"
-        >
-          &#60;
-        </button>
+        {isMobile && (
+          <button
+            className="depoimentos-seta"
+            onClick={anterior}
+            aria-label="Anterior"
+          >
+            &#60;
+          </button>
+        )}
         {visiveis.map((d, idx) => (
           <div className="depoimento-card" key={d.nome}>
             <Estrelas />
@@ -87,13 +98,15 @@ export default function Depoimentos() {
             </div>
           </div>
         ))}
-        <button
-          className="depoimentos-seta"
-          onClick={proximo}
-          aria-label="Próximo"
-        >
-          &#62;
-        </button>
+        {isMobile && (
+          <button
+            className="depoimentos-seta"
+            onClick={proximo}
+            aria-label="Próximo"
+          >
+            &#62;
+          </button>
+        )}
       </div>
     </section>
   );

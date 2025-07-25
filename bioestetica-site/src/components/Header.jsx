@@ -3,6 +3,17 @@ import { useState } from "react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Função para rolar suavemente até a seção
+  function handleNavClick(e, id) {
+    e.preventDefault();
+    setMenuOpen(false);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <header className="header">
       <div className="header-left">
@@ -14,27 +25,17 @@ export default function Header() {
       </div>
       <button
         className="menu-toggle"
-        aria-label="Abrir menu"
+        aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
         onClick={() => setMenuOpen((open) => !open)}
       >
-        <span className="menu-icon" />
+        <span className={`menu-icon${menuOpen ? " open" : ""}`} />
       </button>
       <nav className={`header-nav${menuOpen ? " open" : ""}`}>
-        <a href="#inicio" onClick={() => setMenuOpen(false)}>
-          Início
-        </a>
-        <a href="#sobre" onClick={() => setMenuOpen(false)}>
-          Sobre
-        </a>
-        <a href="#servicos" onClick={() => setMenuOpen(false)}>
-          Serviços
-        </a>
-        <a href="#depoimentos" onClick={() => setMenuOpen(false)}>
-          Depoimentos
-        </a>
-        <a href="#contato" onClick={() => setMenuOpen(false)}>
-          Contato
-        </a>
+        <a href="#inicio" onClick={e => handleNavClick(e, "inicio")}>Início</a>
+        <a href="#sobre" onClick={e => handleNavClick(e, "sobre")}>Sobre</a>
+        <a href="#servicos" onClick={e => handleNavClick(e, "servicos")}>Serviços</a>
+        <a href="#depoimentos" onClick={e => handleNavClick(e, "depoimentos")}>Depoimentos</a>
+        <a href="#contato" onClick={e => handleNavClick(e, "contato")}>Contato</a>
       </nav>
     </header>
   );
