@@ -146,6 +146,7 @@
 }
 .contato-whatsapp-msg {
   display: flex !important;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 1.1rem;
@@ -220,6 +221,8 @@
     box-shadow: 0 2px 8px rgba(139, 106, 83, 0.09);
     text-align: center;
     letter-spacing: 0.01em;
+    width: 100%;
+    max-width: 500px;
   }
 }
 @media (max-width: 600px) {
@@ -250,5 +253,30 @@
   }
   .contato-info strong {
     font-size: 1rem;
+  }
+}
+
+.contato-whatsapp-info {
+  display: block;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--cor-marrom-escuro);
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #25D366;
+  line-height: 1.4;
+  opacity: 0.9;
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 900px) {
+  .contato-whatsapp-info {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding: 0.6rem;
   }
 }

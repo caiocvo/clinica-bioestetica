@@ -16,12 +16,13 @@
 }
 .footer-col h3,
 .footer-col h4 {
-  color: #fff;
+  color: #bb8e8e;
   font-family: "Segoe UI Semibold", "Roboto", "Arial", sans-serif;
   font-size: 1.5rem;
   margin-bottom: 1.1rem;
   font-weight: bold;
 }
+
 .footer-col ul {
   list-style: none;
   padding: 0;
