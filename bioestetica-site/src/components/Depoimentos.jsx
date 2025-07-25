@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Depoimentos.css";
 
 const depoimentos = [
@@ -44,69 +44,60 @@ function Estrelas() {
   );
 }
 
+function DepoimentoCard({ depoimento }) {
+  return (
+    <div className="depoimento-card canva-style">
+      <Estrelas />
+      <p className="depoimento-texto">{depoimento.texto}</p>
+      <div className="depoimento-autor">
+        <span className="depoimento-avatar">{depoimento.iniciais}</span>
+        <div>
+          <span className="depoimento-nome">{depoimento.nome}</span>
+          <span className="depoimento-tempo">{depoimento.tempo}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Depoimentos() {
-  const [index, setIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 900);
-    }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const nextDepoimento = () => {
+    setCurrentIndex((prev) => (prev + 1) % depoimentos.length);
+  };
 
-  let visiveis;
-  if (isMobile) {
-    visiveis = [depoimentos[index]];
-  } else {
-    visiveis = depoimentos;
-  }
-
-  const anterior = () =>
-    setIndex((i) => (i === 0 ? depoimentos.length - 1 : i - 1));
-  const proximo = () =>
-    setIndex((i) => (i === depoimentos.length - 1 ? 0 : i + 1));
+  const prevDepoimento = () => {
+    setCurrentIndex((prev) => (prev - 1 + depoimentos.length) % depoimentos.length);
+  };
 
   return (
-    <section id="depoimentos" className="depoimentos">
+    <section id="depoimentos" className="depoimentos canva-carousel">
       <h2 className="depoimentos-titulo">Depoimentos</h2>
       <p className="depoimentos-subtitulo">
         O que nossos clientes dizem sobre os tratamentos e resultados.
       </p>
-      <div className="depoimentos-container">
-        {isMobile && (
-          <button
-            className="depoimentos-seta"
-            onClick={anterior}
-            aria-label="Anterior"
+      <div className="canva-carousel-container">
+        <button className="canva-arrow left" onClick={prevDepoimento}>
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <div className="canva-carousel-viewport">
+          <div
+            className="canva-carousel-track"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
-            &#60;
-          </button>
-        )}
-        {visiveis.map((d, idx) => (
-          <div className="depoimento-card" key={d.nome}>
-            <Estrelas />
-            <p className="depoimento-texto">{d.texto}</p>
-            <div className="depoimento-autor">
-              <span className="depoimento-avatar">{d.iniciais}</span>
-              <div>
-                <span className="depoimento-nome">{d.nome}</span>
-                <span className="depoimento-tempo">{d.tempo}</span>
-              </div>
-            </div>
+            {depoimentos.map((depoimento, idx) => (
+              <DepoimentoCard key={idx} depoimento={depoimento} />
+            ))}
           </div>
-        ))}
-        {isMobile && (
-          <button
-            className="depoimentos-seta"
-            onClick={proximo}
-            aria-label="Próximo"
-          >
-            &#62;
-          </button>
-        )}
+        </div>
+        <button className="canva-arrow right" onClick={nextDepoimento}>
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <polyline points="9 6 15 12 9 18" />
+          </svg>
+        </button>
       </div>
     </section>
   );

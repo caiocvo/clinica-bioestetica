@@ -95,16 +95,64 @@
   text-decoration: underline;
   color: var(--cor-rose);
 }
+.contato-whatsapp-msg {
+  display: none;
+}
 @media (max-width: 900px) {
   .contato-container {
     flex-direction: column;
     gap: 1.5rem;
-    align-items: stretch;
+    align-items: center;
+    padding-left: 18px;
+    padding-right: 18px;
   }
   .contato-form,
   .contato-info {
     min-width: 0;
-    max-width: 98vw;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
     padding: 1.2rem 0.7rem 1rem 0.7rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(139, 106, 83, 0.13);
+  }
+  .contato-form label {
+    font-size: 0.97rem;
+  }
+  .contato-form input,
+  .contato-form select,
+  .contato-form textarea {
+    font-size: 0.97rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(139, 106, 83, 0.07);
+  }
+  .contato-form button {
+    font-size: 1.01rem;
+    border-radius: 12px;
+    margin-top: 1.2rem;
+    box-shadow: 0 2px 8px rgba(139, 106, 83, 0.13);
+  }
+  .contato-info h3 {
+    font-size: 1.1rem;
+  }
+  .contato-info ul {
+    font-size: 0.97rem;
+  }
+  .contato-whatsapp-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.1rem;
+  }
+  .contato-whatsapp-only-mobile {
+    background: #e2cdb1;
+    color: #5a4a4a;
+    font-weight: 600;
+    font-size: 1.08rem;
+    padding: 0.7rem 1.3rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 8px rgba(139, 106, 83, 0.09);
+    text-align: center;
+    letter-spacing: 0.01em;
   }
 }

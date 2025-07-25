@@ -1,52 +1,120 @@
 .depoimentos {
-  background: var(--cor-bg);
-  padding: 3.5rem 0 3.5rem 0;
+  background: #f5ede6;
+  padding: 4rem 0 4rem 0;
   text-align: center;
 }
-.depoimentos-container {
+
+.canva-carousel-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
-  max-width: 1300px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 0 2vw;
-  align-items: stretch;
+  position: relative;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
 }
-.depoimento-card {
+
+.canva-carousel-viewport {
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 24px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.canva-carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+  width: 100%;
+}
+
+.depoimento-card.canva-style {
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(139, 106, 83, 0.1);
-  padding: 1.3rem 1rem 1rem 1rem;
-  max-width: 320px;
-  min-width: 220px;
-  min-height: 320px;
-  height: 320px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(139, 106, 83, 0.13);
+  padding: 2.5rem 2.2rem 2rem 2.2rem;
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  min-height: 220px;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  position: relative;
-  border: none;
-  transition: box-shadow 0.2s, transform 0.2s;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
+
+.canva-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  background: #bfa07a;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 4px 16px rgba(139, 106, 83, 0.13);
+  z-index: 10;
+  font-size: 2rem;
+}
+.canva-arrow.left { left: -28px; }
+.canva-arrow.right { right: -28px; }
+.canva-arrow:disabled { opacity: 0.5; cursor: not-allowed; }
+.canva-arrow:hover { background: #a88b6a; }
+
+@media (max-width: 700px) {
+  .canva-carousel-container {
+    max-width: 98vw;
+    padding: 0 0.2rem;
+  }
+  .canva-carousel-viewport {
+    max-width: 98vw;
+    border-radius: 18px;
+  }
+  .depoimento-card.canva-style {
+    padding: 1.3rem 0.7rem 1rem 0.7rem;
+    min-height: 180px;
+    border-radius: 18px;
+  }
+  .canva-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+  }
+  .canva-arrow.left { left: -12px; }
+  .canva-arrow.right { right: -12px; }
+}
+
 .estrelas {
   display: flex;
   gap: 0.18rem;
   margin-bottom: 1.2rem;
 }
+
 .estrelas svg {
   fill: #f7c948;
 }
+
 .depoimento-texto {
   flex-grow: 1;
   width: 100%;
-  font-size: 0.94rem;
-  margin-bottom: 0.5rem;
-  color: var(--cor-marrom);
+  font-size: 1.08rem;
+  margin-bottom: 0.7rem;
+  color: var(--cor-marrom, #4a3a3a);
   font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+  line-height: 1.6;
 }
+
 .depoimento-autor {
   display: flex;
   align-items: center;
@@ -56,8 +124,9 @@
   width: 100%;
   margin-top: auto;
 }
+
 .depoimento-avatar {
-  background: var(--cor-marrom);
+  background: var(--cor-marrom, #a88b6a);
   color: #fff;
   font-weight: bold;
   font-size: 1.05rem;
@@ -72,89 +141,40 @@
   letter-spacing: 1px;
   flex-shrink: 0;
 }
+
 .depoimento-nome {
   font-weight: bold;
-  color: var(--cor-marrom-escuro);
-  font-size: 1.02rem;
+  color: var(--cor-marrom-escuro, #4a3a3a);
+  font-size: 1.08rem;
   display: block;
   margin-bottom: 0.1rem;
   font-family: "Segoe UI Semibold", "Roboto", "Arial", sans-serif;
 }
+
 .depoimento-tempo {
   color: #888;
-  font-size: 0.93rem;
+  font-size: 0.98rem;
   display: block;
 }
-.depoimentos-seta {
-  background: #a88b6a;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  font-size: 1.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s;
-  margin: 0 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  outline: none;
-}
-.depoimentos-seta:hover,
-.depoimentos-seta:focus {
-  background: #b38b59;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
-}
+
 .depoimentos-titulo {
   font-family: "Playfair Display", "Georgia", serif;
   color: #4a3a3a;
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 0.7rem;
-  font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
   letter-spacing: 0.01em;
 }
+
 .depoimentos-subtitulo {
   color: #4a3a3a;
-  font-size: 1rem;
+  font-size: 1.08rem;
   text-align: center;
   margin-left: 40px;
   margin-right: 40px;
   margin-bottom: 2.5rem;
-  font-family: "Montserrat", Arial, sans-serif;
   font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
   letter-spacing: 0.01em;
 }
-@media (max-width: 1200px) {
-  .depoimentos-container {
-    gap: 1.2rem;
-    max-width: 98vw;
-  }
-  .depoimento-card {
-    max-width: 98vw;
-  }
-}
-@media (min-width: 901px) {
-  .depoimentos-seta {
-    display: none;
-  }
-}
-@media (max-width: 900px) {
-  .depoimentos-container {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 0 1vw;
-  }
-  .depoimento-card {
-    max-width: 98vw;
-    min-width: 0;
-    min-height: 0;
-    padding: 2.5rem 2rem 2rem 2rem;
-  }
-  .depoimentos-seta {
-    display: flex;
-  }
-}
+

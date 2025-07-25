@@ -69,6 +69,12 @@ export default function Contato() {
   return (
     <section id="contato" className="contato">
       <div className="contato-container">
+        {/* Mensagem chamativa para mobile/tablet */}
+        <div className="contato-whatsapp-msg">
+          <span className="contato-whatsapp-only-mobile">
+            Entre em contato via WhatsApp aqui!
+          </span>
+        </div>
         <form className="contato-form" ref={formRef} onSubmit={handleSubmit}>
           <label>
             Nome Completo

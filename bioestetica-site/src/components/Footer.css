@@ -138,14 +138,29 @@
   .footer-main {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .footer-bottom {
     flex-direction: column;
     gap: 1.2rem;
     align-items: flex-start;
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .footer-copy {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .footer-col h3,
+  .footer-col h4 {
+    font-size: 1.1rem;
+  }
+  .footer-col ul li,
+  .footer-col ul li a,
+  .footer-brand p {
+    font-size: 0.97rem;
   }
 }

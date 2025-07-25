@@ -55,6 +55,23 @@
 .hero-btn:hover {
   background: var(--cor-rose);
 }
+.hero-img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .hero-img {
+    max-width: 95vw;
+    height: auto;
+    min-height: 340px;
+    object-fit: cover;
+  }
+}
+
 @media (max-width: 600px) {
   .hero-card {
     padding: 2rem 1rem;
