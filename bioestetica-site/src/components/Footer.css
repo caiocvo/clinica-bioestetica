@@ -98,6 +98,10 @@
   fill: #d2a7a7;
 }
 .footer-top {
+  position: fixed;
+  right: 24px;
+  left: auto;
+  bottom: 24px;
   background: #7a6a6a;
   color: #f3e3df;
   border: none;
@@ -109,9 +113,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-left: 1.5rem;
-  transition: background 0.2s;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  z-index: 9999;
+  transition: background 0.2s;
+  padding: 0;
 }
 .footer-top:hover {
   background: #d2a7a7;
@@ -162,5 +167,13 @@
   .footer-col ul li a,
   .footer-brand p {
     font-size: 0.97rem;
+  }
+  .footer-top {
+    right: 12px;
+    left: auto;
+    bottom: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
   }
 }

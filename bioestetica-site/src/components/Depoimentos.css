@@ -136,6 +136,86 @@
   .canva-arrow:hover { background: #a88b6a; }
 }
 
+@media (max-width: 900px) {
+  .canva-carousel-viewport,
+  .depoimentos-slider-card-wrapper,
+  .depoimento-card.canva-style {
+    width: 50vw !important;
+    max-width: 50vw !important;
+    min-width: 50vw !important;
+  }
+  .canva-arrow {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.2rem !important;
+  }
+  .canva-arrow.left {
+    left: -50px !important;
+  }
+  .canva-arrow.right {
+    right: -50px !important;
+  }
+  .depoimentos-titulo {
+    font-size: 1.5rem !important;
+  }
+  .depoimentos-subtitulo {
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 600px) {
+  .canva-carousel-viewport,
+  .depoimentos-slider-card-wrapper,
+  .depoimento-card.canva-style {
+    width: 85vw !important;
+    max-width: 85vw !important;
+    min-width: 85vw !important;
+  }
+  .canva-arrow {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 1.5rem !important;
+  }
+  .canva-arrow.left {
+    left: -31px !important;
+  }
+  .canva-arrow.right {
+    right: -31px !important;
+  }
+  .depoimentos-titulo {
+    font-size: 1.35rem !important;
+  }
+  .depoimentos-subtitulo {
+    font-size: 0.93rem !important;
+  }
+}
+@media (max-width: 380px) {
+  .canva-carousel-viewport,
+  .depoimentos-slider-card-wrapper,
+  .depoimento-card.canva-style {
+    width: 75vw !important;
+    max-width: 75vw !important;
+    min-width: 75vw !important;
+  }
+  .canva-arrow {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 1.2rem !important;
+  }
+  .canva-arrow.left {
+    left: -24px !important;
+  }
+  .canva-arrow.right {
+    right: -24px !important;
+  }
+}
+
+.depoimentos-slider-card-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .estrelas {
   display: flex;
   gap: 0.18rem;

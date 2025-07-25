@@ -80,8 +80,57 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 1.05rem;
-  color: var(--cor-marrom-escuro);
+}
+.contato-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  margin-bottom: 2rem;
+}
+.contato-icon-bg {
+  background: #f5ede3;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(139, 106, 83, 0.06);
+}
+.contato-icon svg {
+  display: block;
+}
+.contato-info strong {
+  color: #7a6a5a;
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+.contato-info li div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contato-social {
+  margin-top: 2.2rem;
+}
+.contato-social strong {
+  color: #7a6a5a;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  display: block;
+}
+.contato-social-icons {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 0.7rem;
+}
+.contato-social-icons .contato-icon-bg {
+  width: 44px;
+  height: 44px;
 }
 .contato-info ul li {
   margin-bottom: 1.1rem;
@@ -96,7 +145,24 @@
   color: var(--cor-rose);
 }
 .contato-whatsapp-msg {
-  display: none;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.1rem;
+  width: 100%;
+}
+.contato-whatsapp-only-mobile {
+  background: #e2cdb1;
+  color: #5a4a4a;
+  font-weight: 600;
+  font-size: 1.08rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(139, 106, 83, 0.09);
+  text-align: center;
+  letter-spacing: 0.01em;
+  width: 100%;
+  max-width: 500px;
 }
 @media (max-width: 900px) {
   .contato-container {
@@ -154,5 +220,35 @@
     box-shadow: 0 2px 8px rgba(139, 106, 83, 0.09);
     text-align: center;
     letter-spacing: 0.01em;
+  }
+}
+@media (max-width: 600px) {
+  .contato-form {
+    max-width: 90vw;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+  .contato-form label,
+  .contato-form input,
+  .contato-form select,
+  .contato-form textarea,
+  .contato-form button {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 700px) {
+  .contato-info li {
+    gap: 0.7rem;
+    margin-bottom: 1.3rem;
+  }
+  .contato-icon-bg {
+    width: 38px;
+    height: 38px;
+  }
+  .contato-social-icons .contato-icon-bg {
+    width: 34px;
+    height: 34px;
+  }
+  .contato-info strong {
+    font-size: 1rem;
   }
 }

@@ -186,3 +186,12 @@
     line-height: 1.2;
   }
 }
+
+/* Remover qualquer position: fixed ou sticky do header */
+header, .header {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  z-index: initial !important;
+}

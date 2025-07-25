@@ -81,7 +81,11 @@ export default function Footer() {
           aria-label="Voltar ao topo"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <span>&uarr;</span>
+          {/* Seta sólida com corpo e cabeça */}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#f3e3df" xmlns="http://www.w3.org/2000/svg" style={{display:'block',margin:'auto'}}>
+            <path d="M12 19V5" stroke="#f3e3df" strokeWidth="2.5" strokeLinecap="round"/>
+            <polygon points="6,11 12,5 18,11" fill="#f3e3df"/>
+          </svg>
         </button>
       </div>
       <div className="footer-copy">

@@ -85,18 +85,19 @@
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 0.7rem;
-  letter-spacing: 0;
+  margin: 0 auto 0.7rem auto;
+  display: block;
 }
 .servicos-subtitulo {
   color: #4a3a3a;
   font-size: 1.05rem;
   text-align: center;
-  margin: 16px auto 40px auto;
+  margin: 0 auto 1.7rem auto;
+  display: block;
+  max-width: 90vw;
+  padding-left: 0;
+  padding-right: 0;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  max-width: 600px;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 @media (max-width: 1000px) {
   .servicos-grid {
@@ -109,7 +110,7 @@
     padding: 1.5rem 1rem 1.2rem 1rem;
   }
   .servicos-titulo {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .servicos-subtitulo {
     font-size: 1rem;
@@ -131,5 +132,15 @@
   }
   .servico-card {
     padding: 2rem 1rem 1.5rem 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .servicos-titulo {
+    font-size: 1.35rem;
+  }
+  .servicos-subtitulo {
+    font-size: 1.05rem;
+    margin-bottom: 1.7rem;
+    text-align: center;
   }
 }
