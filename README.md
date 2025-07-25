@@ -1,13 +1,26 @@
-# Site Clínica Bioestética
+# 🌿 Clínica Bioestética – Corpo e Pele
 
-Este é o site institucional da clínica Corpo e Pele, desenvolvido para a biomédica esteta Josiane Sousa.
+Site institucional desenvolvido para a biomédica esteta **Josiane Sousa**, apresentando os serviços da Clínica Corpo e Pele com design moderno e funcional.
 
-## Estrutura do Projeto
+## ✨ Sobre o Projeto
+Plataforma informativa e acessível que promove os tratamentos estéticos oferecidos pela clínica, com foco na experiência do usuário.
 
-- `index.html`: Página principal
-- `style.css`: Estilos do site
-- `/imagens`: Imagens utilizadas no site
+## 🧩 Funcionalidades
+- 📱 **Layout Responsivo**: Compatível com desktop, tablet e celular.
+- 🧴 **Serviços**: Seção com detalhes dos procedimentos estéticos.
+- 💬 **Depoimentos**: Avaliações reais de pacientes.
+- 📞 **Contato Facilitado**: Formulário direto, redes sociais e localização.
+- 🎨 **Identidade Visual**: Cores e tipografia voltadas para transmitir profissionalismo e cuidado.
 
-## Como usar
+## 👩‍⚕️ Sobre a Profissional
+**Josiane Sousa** – biomédica esteta dedicada a oferecer procedimentos personalizados com foco na autoestima e bem-estar.
 
-Coloque as imagens na pasta `/imagens` e abra o `index.html` em seu navegador.
+## 📸 Imagens e Conteúdo
+- 🗂️ Imagens disponíveis na pasta `/imagens`
+- 📝 Conteúdo claro e objetivo sobre os serviços e diferenciais
+
+## 💻 Tecnologias Utilizadas
+- 🔵 **HTML5**: Estrutura semântica e acessível
+- 🟡 **CSS3**: Estilização responsiva e moderna
+- 🟠 **JavaScript**: Interatividade (quando aplicável)
+- ⚡ Design otimizado para carregamento rápido
