@@ -1,11 +1,21 @@
 .depoimentos {
-  background: #f5ede6;
+  background: #fff;
   padding: 4rem 0 4rem 0;
   text-align: center;
 }
 
+.depoimentos-titulo {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  color: #4a3a3a;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0;
+}
+
 /* DESKTOP: 3 cards lado a lado, alinhados, nomes à esquerda, MESMA ALTURA (grid) */
-@media (min-width: 1200px) {
+@media (min-width: 1101px) {
   .canva-carousel-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -54,9 +64,76 @@
   }
 }
 
-/* MOBILE/TABLET: NÃO ALTERAR, manter como está */
-@media (max-width: 1199px) {
-  /* Mantém o layout mobile/tablet já aprovado */
+/* MOBILE/TABLET: slider, 1 card centralizado, setas coladas ao card, card quadrado, padding generoso, sombra, borda arredondada, sem vazar outros cards */
+@media (max-width: 1100px) {
+  .canva-carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .canva-carousel-viewport {
+    width: 100%;
+    max-width: 400px;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .canva-carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+    width: 100%;
+  }
+  .depoimento-card.canva-style {
+    background: #fff !important;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(139, 106, 83, 0.13);
+    padding: 2rem 1.2rem 1.5rem 1.2rem;
+    min-width: 100%;
+    max-width: 400px;
+    width: 100%;
+    min-height: 320px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  .canva-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: #bfa07a;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 4px 16px rgba(139, 106, 83, 0.13);
+    z-index: 10;
+    font-size: 2rem;
+  }
+  .canva-arrow.left { left: 0; }
+  .canva-arrow.right { right: 0; }
+  .canva-arrow:disabled { opacity: 0.5; cursor: not-allowed; }
+  .canva-arrow:hover { background: #a88b6a; }
 }
 
 .estrelas {
@@ -111,16 +188,6 @@
   color: #888;
   font-size: 0.98rem;
   display: block;
-}
-
-.depoimentos-titulo {
-  font-family: "Playfair Display", "Georgia", serif;
-  color: #4a3a3a;
-  font-size: 2.3rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 0.7rem;
-  letter-spacing: 0.01em;
 }
 
 .depoimentos-subtitulo {
