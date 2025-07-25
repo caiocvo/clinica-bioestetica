@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Depoimentos.css";
 
 const depoimentos = [
@@ -60,7 +60,18 @@ function DepoimentoCard({ depoimento }) {
   );
 }
 
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 900);
+  useEffect(() => {
+    const onResize = () => setIsDesktop(window.innerWidth >= 900);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+  return isDesktop;
+}
+
 export default function Depoimentos() {
+  const isDesktop = useIsDesktop();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextDepoimento = () => {
@@ -77,28 +88,36 @@ export default function Depoimentos() {
       <p className="depoimentos-subtitulo">
         O que nossos clientes dizem sobre os tratamentos e resultados.
       </p>
-      <div className="canva-carousel-container">
-        <button className="canva-arrow left" onClick={prevDepoimento}>
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-        </button>
-        <div className="canva-carousel-viewport">
-          <div
-            className="canva-carousel-track"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {depoimentos.map((depoimento, idx) => (
-              <DepoimentoCard key={idx} depoimento={depoimento} />
-            ))}
-          </div>
+      {isDesktop ? (
+        <div className="canva-carousel-container">
+          {depoimentos.map((depoimento, idx) => (
+            <DepoimentoCard key={idx} depoimento={depoimento} />
+          ))}
         </div>
-        <button className="canva-arrow right" onClick={nextDepoimento}>
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="9 6 15 12 9 18" />
-          </svg>
-        </button>
-      </div>
+      ) : (
+        <div className="canva-carousel-container">
+          <button className="canva-arrow left" onClick={prevDepoimento}>
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+          <div className="canva-carousel-viewport">
+            <div
+              className="canva-carousel-track"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {depoimentos.map((depoimento, idx) => (
+                <DepoimentoCard key={idx} depoimento={depoimento} />
+              ))}
+            </div>
+          </div>
+          <button className="canva-arrow right" onClick={nextDepoimento}>
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <polyline points="9 6 15 12 9 18" />
+            </svg>
+          </button>
+        </div>
+      )}
     </section>
   );
 }
