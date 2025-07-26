@@ -188,10 +188,13 @@
     height: 44px !important;
     font-size: 1.4rem !important;
     display: flex !important;
-    z-index: 1000 !important;
+    z-index: 10000 !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
   }
   .canva-arrow svg {
     width: 28px !important;
@@ -202,6 +205,7 @@
     opacity: 1 !important;
     visibility: visible !important;
     position: relative !important;
+    pointer-events: auto !important;
   }
   .canva-arrow.left {
     left: -50px !important;
@@ -229,10 +233,13 @@
     height: 40px !important;
     font-size: 1.3rem !important;
     display: flex !important;
-    z-index: 1000 !important;
+    z-index: 10000 !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
   }
   .canva-arrow svg {
     width: 26px !important;
@@ -270,10 +277,13 @@
     height: 36px !important;
     font-size: 1.1rem !important;
     display: flex !important;
-    z-index: 1000 !important;
+    z-index: 10000 !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
   }
   .canva-arrow svg {
     width: 24px !important;
