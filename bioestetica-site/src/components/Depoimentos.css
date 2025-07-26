@@ -64,8 +64,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #bfa07a;
     border-radius: 50%;
     border: none;
@@ -76,10 +76,10 @@
     transition: background 0.2s;
     box-shadow: 0 4px 16px rgba(139, 106, 83, 0.13);
     z-index: 10;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
-  .canva-arrow.left { left: 10px; }
-  .canva-arrow.right { right: 10px; }
+  .canva-arrow.left { left: 0; }
+  .canva-arrow.right { right: 0; }
 }
 
 /* MOBILE/TABLET: slider, 1 card centralizado, setas coladas ao card, card quadrado, padding generoso, sombra, borda arredondada, sem vazar outros cards */
@@ -169,10 +169,10 @@
     display: flex !important;
   }
   .canva-arrow.left {
-    left: 5px !important;
+    left: -50px !important;
   }
   .canva-arrow.right {
-    right: 5px !important;
+    right: -50px !important;
   }
   .depoimentos-titulo {
     font-size: 1.5rem !important;
@@ -196,10 +196,10 @@
     display: flex !important;
   }
   .canva-arrow.left {
-    left: 2px !important;
+    left: -31px !important;
   }
   .canva-arrow.right {
-    right: 2px !important;
+    right: -31px !important;
   }
   .depoimentos-titulo {
     font-size: 1.35rem !important;
@@ -223,10 +223,10 @@
     display: flex !important;
   }
   .canva-arrow.left {
-    left: 1px !important;
+    left: -24px !important;
   }
   .canva-arrow.right {
-    right: 1px !important;
+    right: -24px !important;
   }
 }
 
