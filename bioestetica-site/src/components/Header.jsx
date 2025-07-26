@@ -1,8 +1,32 @@
 import "./Header.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [headerVisible, setHeaderVisible] = useState(true);
+
+  // Controlar visibilidade do header baseado no scroll
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Mostrar header apenas no topo (primeiros 100px)
+      if (currentScrollY <= 100) {
+        setHeaderVisible(true);
+        document.getElementById('root')?.classList.add('has-header');
+      } else {
+        setHeaderVisible(false);
+        document.getElementById('root')?.classList.remove('has-header');
+      }
+      
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Função para rolar suavemente até a seção
   function handleNavClick(e, id) {
@@ -15,7 +39,7 @@ export default function Header() {
   }
 
   return (
-    <header className="header">
+    <header className={`header${!headerVisible ? ' hidden' : ''}`}>
       <div className="header-left">
         <img
           src="./images/logo-removebg.png"

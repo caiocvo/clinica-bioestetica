@@ -8,8 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 2vw;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 10;
   margin: 0;
   height: auto;
@@ -189,7 +188,15 @@
 
 /* Garantir que o header fique sempre visível */
 header, .header {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 999 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+header.hidden, .header.hidden {
+  transform: translateY(-100%);
 }
