@@ -60,8 +60,26 @@
     font-family: "Segoe UI Semibold", "Roboto", "Arial", sans-serif;
   }
   .canva-arrow {
-    display: none;
+    display: flex !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #bfa07a;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 4px 16px rgba(139, 106, 83, 0.13);
+    z-index: 10;
+    font-size: 1.5rem;
   }
+  .canva-arrow.left { left: 10px; }
+  .canva-arrow.right { right: 10px; }
 }
 
 /* MOBILE/TABLET: slider, 1 card centralizado, setas coladas ao card, card quadrado, padding generoso, sombra, borda arredondada, sem vazar outros cards */
@@ -148,12 +166,13 @@
     width: 36px !important;
     height: 36px !important;
     font-size: 1.2rem !important;
+    display: flex !important;
   }
   .canva-arrow.left {
-    left: -50px !important;
+    left: 5px !important;
   }
   .canva-arrow.right {
-    right: -50px !important;
+    right: 5px !important;
   }
   .depoimentos-titulo {
     font-size: 1.5rem !important;
@@ -174,12 +193,13 @@
     width: 30px !important;
     height: 30px !important;
     font-size: 1.5rem !important;
+    display: flex !important;
   }
   .canva-arrow.left {
-    left: -31px !important;
+    left: 2px !important;
   }
   .canva-arrow.right {
-    right: -31px !important;
+    right: 2px !important;
   }
   .depoimentos-titulo {
     font-size: 1.35rem !important;
@@ -200,12 +220,13 @@
     width: 26px !important;
     height: 26px !important;
     font-size: 1.2rem !important;
+    display: flex !important;
   }
   .canva-arrow.left {
-    left: -24px !important;
+    left: 1px !important;
   }
   .canva-arrow.right {
-    right: -24px !important;
+    right: 1px !important;
   }
 }
 
