@@ -115,9 +115,10 @@
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  z-index: 9999;
+  z-index: 99999;
   transition: background 0.2s;
   padding: 0;
+  pointer-events: auto !important;
 }
 .footer-top:hover {
   background: #d2a7a7;

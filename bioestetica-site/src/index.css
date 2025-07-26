@@ -27,7 +27,6 @@ html,
   font-family: "Montserrat", Arial, sans-serif;
   color: var(--cor-texto);
   box-sizing: border-box;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 }
