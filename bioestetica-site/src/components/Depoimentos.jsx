@@ -97,11 +97,11 @@ export default function Depoimentos() {
       ) : (
         <div className="canva-carousel-container">
           <div className="depoimentos-slider-card-wrapper">
-            <button className="canva-arrow left" onClick={prevDepoimento}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 18l-6-6 6-6"/>
-              </svg>
-            </button>
+                          <button className="canva-arrow left" onClick={prevDepoimento}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 18l-6-6 6-6"/>
+                </svg>
+              </button>
             <div className="canva-carousel-viewport">
               <div
                 className="canva-carousel-track"
@@ -112,11 +112,11 @@ export default function Depoimentos() {
                 ))}
               </div>
             </div>
-            <button className="canva-arrow right" onClick={nextDepoimento}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 18l6-6-6-6"/>
-              </svg>
-            </button>
+                          <button className="canva-arrow right" onClick={nextDepoimento}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </button>
           </div>
         </div>
       )}
