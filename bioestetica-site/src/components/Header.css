@@ -188,15 +188,6 @@
 
 /* Garantir que o header fique sempre visível */
 header, .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 999;
-  transform: translateY(0);
-  transition: transform 0.3s ease;
-}
-
-header.hidden, .header.hidden {
-  transform: translateY(-100%);
 }

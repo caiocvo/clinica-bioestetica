@@ -6,11 +6,6 @@
   min-height: 100vh;
   padding: 0;
   background: var(--cor-bg);
-  transition: padding-top 0.3s ease;
-}
-
-#root.has-header {
-  padding-top: 80px;
 }
 
 .logo {
