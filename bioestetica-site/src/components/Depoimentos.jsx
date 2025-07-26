@@ -98,9 +98,7 @@ export default function Depoimentos() {
         <div className="canva-carousel-container">
           <div className="depoimentos-slider-card-wrapper">
             <button className="canva-arrow left" onClick={prevDepoimento}>
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
+              ←
             </button>
             <div className="canva-carousel-viewport">
               <div
@@ -113,9 +111,7 @@ export default function Depoimentos() {
               </div>
             </div>
             <button className="canva-arrow right" onClick={nextDepoimento}>
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
+              →
             </button>
           </div>
         </div>

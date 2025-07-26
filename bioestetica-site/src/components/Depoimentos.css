@@ -76,13 +76,8 @@
          transition: background 0.2s;
          box-shadow: 0 4px 16px rgba(139, 106, 83, 0.13);
          z-index: 10;
-         font-size: 1.8rem;
-       }
-       
-       .canva-arrow svg {
-         width: 24px;
-         height: 24px;
-         stroke-width: 3;
+         font-size: 2rem;
+         font-weight: bold;
        }
   .canva-arrow.left { left: 0; }
   .canva-arrow.right { right: 0; }
