@@ -5,12 +5,12 @@ export default function Sobre() {
     <section id="sobre" className="sobre">
       <div className="sobre-img-area">
         <img
-          src="/images/terno.jpg"
+          src="./images/terno.jpg"
           alt="Josiane Sousa"
           className="sobre-capa"
         />
         <img
-          src="/images/capa.jpg"
+          src="./images/capa.jpg"
           alt="Josiane Sousa"
           className="sobre-avatar"
         />

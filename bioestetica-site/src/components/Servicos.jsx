@@ -5,37 +5,37 @@ const servicos = [
     titulo: "Preenchimento Facial",
     descricao:
       "Procedimento que restaura o volume facial perdido com o tempo, suavizando rugas e linhas de expressão.",
-    icone: "/images/seringa.png",
+    icone: "./images/seringa.png",
   },
   {
     titulo: "Microagulhamento",
     descricao:
       "Estimula a produção de colágeno, melhorando a textura da pele, cicatrizes de acne e estrias.",
-    icone: "/images/rolo.png",
+    icone: "./images/rolo.png",
   },
   {
     titulo: "Bioestimuladores",
     descricao:
       "Tratamentos que estimulam a produção natural de colágeno, melhorando a firmeza e elasticidade da pele.",
-    icone: "/images/gota.png",
+    icone: "./images/gota.png",
   },
   {
     titulo: "Limpeza de Pele Profunda",
     descricao:
       "Procedimento que remove impurezas, cravos e células mortas, deixando a pele limpa e renovada.",
-    icone: "/images/varinha.png",
+    icone: "./images/varinha.png",
   },
   {
     titulo: "Radiofrequência",
     descricao:
       "Tecnologia que promove o tensionamento da pele, reduzindo a flacidez facial e corporal.",
-    icone: "/images/raio.png",
+    icone: "./images/raio.png",
   },
   {
     titulo: "Harmonização Facial",
     descricao:
       "Conjunto de procedimentos que visam equilibrar e harmonizar os traços faciais, realçando a beleza natural.",
-    icone: "/images/rosto.png",
+    icone: "./images/rosto.png",
   },
 ];
 

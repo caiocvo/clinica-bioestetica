@@ -18,7 +18,7 @@ export default function Header() {
     <header className="header">
       <div className="header-left">
         <img
-          src="/images/logo-removebg.png"
+          src="./images/logo-removebg.png"
           alt="Logo Clínica Corpo e Pele"
           className="logo"
         />

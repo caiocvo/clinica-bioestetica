@@ -44,7 +44,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <div className="footer-social">
-          <a href="#" aria-label="Instagram">
+          <a href="https://www.instagram.com/corpoepeleesteticaelaser?igsh=ZDJzd2pzczl0aHpn&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg
               width="22"
               height="22"
