@@ -49,6 +49,29 @@ footer {
 
 * {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Permitir que as setas de depoimentos sejam visíveis */
+.depoimentos {
+  overflow: visible;
+}
+
+.canva-carousel-container {
+  overflow: visible;
+}
+
+.depoimentos-slider-card-wrapper {
+  overflow: visible;
 }
 h1,
 h2,
