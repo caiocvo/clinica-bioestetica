@@ -84,8 +84,8 @@
 .contato-info li {
   display: flex;
   align-items: flex-start;
-  gap: 1.1rem;
-  margin-bottom: 2rem;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
 }
 .contato-icon-bg {
   background: #f5ede3;
@@ -105,13 +105,22 @@
   color: #7a6a5a;
   font-size: 1.15rem;
   font-weight: bold;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.05rem;
   display: block;
 }
 .contato-info li div {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.contato-info li div strong {
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+.contato-info li div br {
+  display: none;
 }
 .contato-social {
   margin-top: 2.2rem;
@@ -240,8 +249,8 @@
 }
 @media (max-width: 700px) {
   .contato-info li {
-    gap: 0.7rem;
-    margin-bottom: 1.3rem;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
   .contato-icon-bg {
     width: 38px;
@@ -253,6 +262,31 @@
   }
   .contato-info strong {
     font-size: 1rem;
+    margin-bottom: 0.03rem;
+  }
+}
+
+/* Telas muito pequenas - juntar mais as informações */
+@media (max-width: 375px) {
+  .contato-info li {
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+  }
+  .contato-info strong {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+  .contato-info li div strong {
+    margin-bottom: 0;
+    line-height: 1.1;
+  }
+  .contato-icon-bg {
+    width: 32px;
+    height: 32px;
+  }
+  .contato-social-icons .contato-icon-bg {
+    width: 30px;
+    height: 30px;
   }
 }
 

@@ -92,3 +92,31 @@
     font-size: 1.1rem;
   }
 }
+
+/* iPhone 8 e telas muito pequenas */
+@media (max-width: 375px) {
+  .hero-bg {
+    min-height: 100vh;
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+  .hero-card {
+    padding: 2rem 1rem;
+    max-width: 320px;
+    margin: 0 0.5rem;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-desc {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+  }
+}

@@ -69,7 +69,10 @@ export default function Footer() {
         <button
           className="footer-top"
           aria-label="Voltar ao topo"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            console.log("Scroll to top clicked");
+          }}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f3e3df" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M18 15l-6-6-6 6"/>

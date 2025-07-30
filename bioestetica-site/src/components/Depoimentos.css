@@ -39,7 +39,7 @@
     min-height: 320px;
     height: 100%;
     border-radius: 24px;
-    box-shadow: 0 8px 32px rgba(139, 106, 83, 0.13);
+    box-shadow: 0 6px 20px rgba(139, 106, 83, 0.12);
     padding: 2.5rem 2.2rem 2rem 2.2rem;
     margin: 0;
     background: #fff !important;
@@ -49,6 +49,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     box-sizing: border-box;
+    border: 1px solid rgba(139, 106, 83, 0.06);
   }
   .depoimento-nome {
     text-align: left;
@@ -138,7 +139,7 @@
   .depoimento-card.canva-style {
     background: #fff !important;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(139, 106, 83, 0.13);
+    box-shadow: 0 6px 20px rgba(139, 106, 83, 0.12);
     padding: 2rem 1.2rem 1.5rem 1.2rem;
     min-width: 100%;
     max-width: 400px;
@@ -152,6 +153,7 @@
     justify-content: flex-start;
     flex-shrink: 0;
     box-sizing: border-box;
+    border: 1px solid rgba(139, 106, 83, 0.06);
   }
   .canva-arrow {
     top: 50%;
@@ -245,9 +247,9 @@
     min-width: 85vw !important;
   }
   .canva-arrow {
-    width: 32px;
-    height: 32px;
-    font-size: 1.1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
     display: flex;
     z-index: 99999;
     align-items: center;
@@ -261,8 +263,8 @@
     border: 2px solid #fff;
   }
   .canva-arrow svg {
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
     stroke-width: 2.5;
     display: block;
     margin: 0;
@@ -294,9 +296,9 @@
     min-width: 75vw !important;
   }
   .canva-arrow {
-    width: 30px;
-    height: 30px;
-    font-size: 1rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
     display: flex;
     z-index: 99999;
     align-items: center;
@@ -310,8 +312,8 @@
     border: 2px solid #fff;
   }
   .canva-arrow svg {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     stroke-width: 2.5;
     display: block;
     margin: 0;
@@ -329,11 +331,53 @@
   }
 }
 
+/* iPhone 8 e telas muito pequenas */
+@media (max-width: 375px) {
+  .canva-carousel-viewport,
+  .depoimentos-slider-card-wrapper,
+  .depoimento-card.canva-style {
+    width: 85vw;
+    max-width: 85vw;
+    min-width: 85vw;
+  }
+  .canva-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+  .canva-arrow svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
+  }
+  .canva-arrow.left {
+    left: -8px;
+  }
+  .canva-arrow.right {
+    right: -8px;
+  }
+  .depoimentos-titulo {
+    font-size: 1.2rem;
+  }
+  .depoimentos-subtitulo {
+    font-size: 0.85rem;
+  }
+}
+
 .depoimentos-slider-card-wrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.depoimento-card.canva-style {
+  transition: all 0.3s ease;
+}
+
+.depoimento-card.canva-style:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139, 106, 83, 0.18);
 }
 
 .estrelas {
@@ -399,5 +443,50 @@
   margin-bottom: 2.5rem;
   font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
   letter-spacing: 0.01em;
+}
+
+.consulta-section {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.consulta-button {
+  background: linear-gradient(135deg, #bfa07a 0%, #a08b6a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 1.2rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 16px rgba(191, 160, 122, 0.2);
+}
+
+.consulta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(191, 160, 122, 0.3);
+}
+
+.consulta-info-text {
+  color: #8b6a53;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.consulta-info-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 3px;
+  height: 3px;
+  background: #bfa07a;
+  border-radius: 50%;
 }
 

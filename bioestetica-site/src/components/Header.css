@@ -191,3 +191,26 @@ header, .header {
   position: relative;
   z-index: 999;
 }
+
+/* iPhone 8 e telas muito pequenas */
+@media (max-width: 375px) {
+  .header {
+    padding: 0.1rem 3vw 0.1rem 3vw;
+  }
+  .header-title {
+    font-size: 1.4rem;
+  }
+  .header-subtitle {
+    font-size: 0.9rem;
+  }
+  .logo {
+    height: 110px !important;
+  }
+  .menu-toggle {
+    margin-right: 3vw;
+  }
+  .header-nav {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}

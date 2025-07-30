@@ -219,3 +219,106 @@
     font-size: 0.98rem;
   }
 }
+
+/* iPhone SE e telas muito pequenas */
+@media (max-width: 375px) {
+  .sobre {
+    padding: 1rem 4px 1rem 4px;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .sobre-img-area {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .sobre-capa {
+    width: 160px;
+    height: 240px;
+    max-width: 75vw;
+    margin: 0 auto;
+    border-radius: 1rem;
+    display: block;
+  }
+  .sobre-texto-area {
+    width: 100%;
+    padding: 0 2px;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .sobre-titulo {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto 0.5rem auto;
+  }
+  .sobre-desc {
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0 auto 1rem auto;
+  }
+  .sobre-cards {
+    justify-content: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .sobre-card {
+    min-width: 70px;
+    padding: 0.4rem 0.5rem 0.3rem 0.5rem;
+    margin: 0;
+  }
+  .sobre-card span {
+    font-size: 0.9rem;
+  }
+  .sobre-card small {
+    font-size: 0.75rem;
+  }
+}
+
+/* iPhone SE específico (320px) */
+@media (max-width: 320px) {
+  .sobre {
+    padding: 0.8rem 2px 0.8rem 2px;
+    gap: 0.8rem;
+  }
+  .sobre-capa {
+    width: 140px;
+    height: 200px;
+    max-width: 70vw;
+  }
+  .sobre-texto-area {
+    padding: 0 1px;
+  }
+  .sobre-titulo {
+    font-size: 0.95rem;
+  }
+  .sobre-desc {
+    font-size: 0.8rem;
+  }
+  .sobre-cards {
+    gap: 0.3rem;
+  }
+  .sobre-card {
+    min-width: 65px;
+    padding: 0.3rem 0.4rem 0.2rem 0.4rem;
+  }
+  .sobre-card span {
+    font-size: 0.85rem;
+  }
+  .sobre-card small {
+    font-size: 0.7rem;
+  }
+}

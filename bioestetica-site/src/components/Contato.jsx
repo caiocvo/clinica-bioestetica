@@ -51,115 +51,27 @@ export default function Contato() {
       return;
     }
 
-    const texto = `Olá! Meu nome é ${nome}.
-Telefone: ${telefone}.
-Serviço de interesse: ${servico}${mensagem ? '\nMensagem: ' + mensagem : ''}`;
-
-    // Formata a mensagem
-    const mensagemFormatada = `Olá! Meu nome é ${nome}.
-Telefone: ${telefone}.
-Serviço de interesse: ${servico}${mensagem ? '\nMensagem: ' + mensagem : ''}`;
+        // Formata a mensagem para WhatsApp
+    const mensagemFormatada = `Olá! Meu nome é ${nome}. Telefone: ${telefone}. Serviço de interesse: ${servico}${mensagem ? '. Mensagem: ' + mensagem : ''}`;
     
-    // Detecta se é mobile
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // Abre o WhatsApp com a mensagem pré-preenchida
+    const numero = "5564999333737";
+    const mensagemEncoded = encodeURIComponent(mensagemFormatada);
     
-    // Copia a mensagem para a área de transferência
-    navigator.clipboard.writeText(mensagemFormatada).then(() => {
-      // Abre o WhatsApp
-      const url = `https://wa.me/5564999333737`;
-      window.open(url, "_blank");
-      
-      if (isMobile) {
-        // Mostra tela estilizada para mobile
-        const overlay = document.createElement('div');
-        overlay.style.cssText = `
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.8);
-          z-index: 10000;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 20px;
-        `;
-        
-        const modal = document.createElement('div');
-        modal.style.cssText = `
-          background: white;
-          border-radius: 20px;
-          padding: 30px;
-          max-width: 350px;
-          width: 100%;
-          text-align: center;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-          animation: slideIn 0.3s ease-out;
-        `;
-        
-        // Adiciona CSS para animação
-        const style = document.createElement('style');
-        style.textContent = `
-          @keyframes slideIn {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-          }
-        `;
-        document.head.appendChild(style);
-        
-        modal.innerHTML = `
-          <div style="margin-bottom: 20px;">
-            <div style="width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
-              <span style="font-size: 30px;">✅</span>
-            </div>
-            <h3 style="color: #25D366; margin: 0 0 10px; font-size: 18px; font-weight: bold;">Mensagem Copiada!</h3>
-            <p style="color: #666; margin: 0; font-size: 14px; line-height: 1.4;">A mensagem foi copiada para a área de transferência</p>
-          </div>
-          
-          <div style="background: #f8f9fa; border-radius: 10px; padding: 15px; margin: 20px 0; border-left: 4px solid #25D366;">
-            <p style="margin: 0; color: #333; font-size: 14px; line-height: 1.4;">
-              <strong>Próximos passos:</strong><br>
-              1. WhatsApp foi aberto<br>
-              2. Cole a mensagem na conversa<br>
-              3. Envie a mensagem
-            </p>
-          </div>
-          
-          <button onclick="this.closest('.whatsapp-overlay').remove()" style="
-            background: #25D366;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 10px;
-          ">Entendi!</button>
-        `;
-        
-        overlay.className = 'whatsapp-overlay';
-        overlay.appendChild(modal);
-        document.body.appendChild(overlay);
-        
-        // Remove o overlay ao clicar fora
-        overlay.addEventListener('click', (e) => {
-          if (e.target === overlay) {
-            overlay.remove();
-          }
-        });
-      } else {
-        // Para desktop, mostra alert simples
-        alert(`✅ Mensagem copiada para a área de transferência!\n\n📱 WhatsApp aberto - Cole a mensagem na conversa.`);
-      }
-    }).catch(() => {
-      // Fallback se não conseguir copiar automaticamente
-      const url = `https://wa.me/5564999333737`;
-      window.open(url, "_blank");
-      alert(`📱 WhatsApp aberto!\n\nCopie a mensagem abaixo e cole na conversa:\n\n${mensagemFormatada}`);
-    });
+    // Tenta diferentes formatos de URL
+    const url1 = `https://wa.me/${numero}?text=${mensagemEncoded}`;
+    const url2 = `https://api.whatsapp.com/send?phone=${numero}&text=${mensagemEncoded}`;
+    
+    // Debug: mostra as URLs no console
+    console.log("URL 1 (wa.me):", url1);
+    console.log("URL 2 (api.whatsapp.com):", url2);
+    console.log("Mensagem formatada:", mensagemFormatada);
+    
+    // Tenta primeiro com api.whatsapp.com
+    window.open(url2, "_blank");
+    
+    // Mostra confirmação
+    alert("✅ WhatsApp aberto com sua mensagem!\n\n📱 A mensagem já está preenchida, é só clicar em enviar.");
   }
 
   function handlePhoneInput(e) {
@@ -175,7 +87,7 @@ Serviço de interesse: ${servico}${mensagem ? '\nMensagem: ' + mensagem : ''}`;
             Entre em contato via WhatsApp aqui!
           </span>
           <span className="contato-whatsapp-info">
-            Ao enviar a mensagem, o texto estará copiado na área de transferência. Por favor, cole no WhatsApp.
+            Preencha o formulário e clique em "Enviar Mensagem" para abrir o WhatsApp com sua mensagem já preenchida!
           </span>
         </div>
         <form className="contato-form" ref={formRef} onSubmit={handleSubmit}>
@@ -259,8 +171,8 @@ Serviço de interesse: ${servico}${mensagem ? '\nMensagem: ' + mensagem : ''}`;
               </span>
               <div>
                 <strong>Horário de Atendimento</strong>
-                <br />
-                Segunda à Sexta: 9h às 19h<br />Sábado: 9h às 14h
+                <div>Segunda à Sexta: 9h às 19h</div>
+                <div>Sábado: 9h às 14h</div>
               </div>
             </li>
           </ul>

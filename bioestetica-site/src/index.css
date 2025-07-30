@@ -54,24 +54,12 @@ footer {
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 
 body {
-  overflow-x: hidden;
-}
-
-/* Permitir que as setas de depoimentos sejam visíveis */
-.depoimentos {
-  overflow: visible;
-}
-
-.canva-carousel-container {
-  overflow: visible;
-}
-
-.depoimentos-slider-card-wrapper {
-  overflow: visible;
+  overflow-y: auto;
+  overflow-x: visible;
 }
 h1,
 h2,
@@ -92,4 +80,37 @@ a:hover {
 }
 button {
   font-family: "Montserrat", Arial, sans-serif;
+}
+
+/* Garantir que o scroll funcione */
+html, body {
+  scroll-behavior: smooth;
+}
+
+/* Evitar scroll horizontal em telas pequenas */
+@media (max-width: 375px) {
+  .sobre {
+    overflow-x: hidden;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  
+  .sobre-img-area,
+  .sobre-texto-area {
+    overflow-x: hidden;
+  }
+}
+
+/* iPhone SE específico (320px) */
+@media (max-width: 320px) {
+  .sobre {
+    overflow-x: hidden;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  
+  .sobre-img-area,
+  .sobre-texto-area {
+    overflow-x: hidden;
+  }
 }
