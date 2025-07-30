@@ -58,19 +58,10 @@ export default function Contato() {
     const numero = "5564999333737";
     const mensagemEncoded = encodeURIComponent(mensagemFormatada);
     
-    // Tenta diferentes formatos de URL
-    const url1 = `https://wa.me/${numero}?text=${mensagemEncoded}`;
-    const url2 = `https://api.whatsapp.com/send?phone=${numero}&text=${mensagemEncoded}`;
+    // Abre o WhatsApp com a mensagem pré-preenchida
+    const url = `https://api.whatsapp.com/send?phone=${numero}&text=${mensagemEncoded}`;
+    window.open(url, "_blank");
     
-    // Debug: mostra as URLs no console
-    console.log("URL 1 (wa.me):", url1);
-    console.log("URL 2 (api.whatsapp.com):", url2);
-    console.log("Mensagem formatada:", mensagemFormatada);
-    
-    // Tenta primeiro com api.whatsapp.com
-    window.open(url2, "_blank");
-    
-    // Mostra confirmação
     alert("✅ WhatsApp aberto com sua mensagem!\n\n📱 A mensagem já está preenchida, é só clicar em enviar.");
   }
 
