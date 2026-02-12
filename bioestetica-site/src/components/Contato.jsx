@@ -170,7 +170,7 @@ export default function Contato() {
           <div className="contato-social">
             <strong>Redes Sociais</strong>
             <div className="contato-social-icons">
-              <a href="https://www.instagram.com/corpoepeleesteticaelaser?igsh=ZDJzd2pzczl0aHpn&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="contato-icon-bg">
+              <a href="https://www.instagram.com/dra.josianesousaa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="contato-icon-bg">
                 {/* Instagram */}
                 <svg width="22" height="22" fill="none" stroke="#bfa07a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
               </a>
