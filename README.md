@@ -1,26 +1,35 @@
-# 🌿 Clínica Bioestética – Corpo e Pele
+# 💅 Corpo & Pele – Estética e Lazer
 
-Site institucional desenvolvido para a biomédica esteta **Josiane Sousa**, apresentando os serviços da Clínica Corpo e Pele com design moderno e funcional.
+Site institucional criado para uma empresa real do ramo de estética. A proposta foi oferecer uma navegação simples e direta, com foco nos serviços oferecidos e na experiência do cliente.
 
-## ✨ Sobre o Projeto
-Plataforma informativa e acessível que promove os tratamentos estéticos oferecidos pela clínica, com foco na experiência do usuário.
+## 📌 Objetivo
 
-## 🧩 Funcionalidades
-- 📱 **Layout Responsivo**: Compatível com desktop, tablet e celular.
-- 🧴 **Serviços**: Seção com detalhes dos procedimentos estéticos.
-- 💬 **Depoimentos**: Avaliações reais de pacientes.
-- 📞 **Contato Facilitado**: Formulário direto, redes sociais e localização.
-- 🎨 **Identidade Visual**: Cores e tipografia voltadas para transmitir profissionalismo e cuidado.
+Oferecer uma vitrine digital para a empresa **Corpo & Pele Estética e Lazer**, com informações relevantes sobre os serviços e contato.
 
-## 👩‍⚕️ Sobre a Profissional
-**Josiane Sousa** – biomédica esteta dedicada a oferecer procedimentos personalizados com foco na autoestima e bem-estar.
+## 🔧 Tecnologias utilizadas
 
-## 📸 Imagens e Conteúdo
-- 🗂️ Imagens disponíveis na pasta `/imagens`
-- 📝 Conteúdo claro e objetivo sobre os serviços e diferenciais
+- HTML5
+- CSS3
+- JavaScript
+- Vercel (deploy)
 
-## 💻 Tecnologias Utilizadas
-- 🔵 **HTML5**: Estrutura semântica e acessível
-- 🟡 **CSS3**: Estilização responsiva e moderna
-- 🟠 **JavaScript**: Interatividade (quando aplicável)
-- ⚡ Design otimizado para carregamento rápido
+## ⚙️ Funcionalidades
+
+- Apresentação dos serviços oferecidos
+- Seção de depoimentos com carrossel
+- Botão de agendamento pelo WhatsApp
+- Layout adaptável (responsivo)
+
+## 🌐 Link online
+
+👉 [Acesse o site aqui](https://corpoepeleesteticaelazer.vercel.app)
+
+## 📈 Resultados
+
+Este site está **em uso por um cliente real**, ajudando na divulgação dos serviços de estética da empresa.
+
+## 🧠 Aprendizados
+
+- Aplicação prática para clientes reais
+- Foco na usabilidade e estética visual
+- Deploy com Vercel e ajustes em produção
