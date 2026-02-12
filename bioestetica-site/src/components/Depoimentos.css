@@ -109,6 +109,9 @@
 
 /* MOBILE/TABLET: slider, 1 card centralizado, setas coladas ao card, card quadrado, padding generoso, sombra, borda arredondada, sem vazar outros cards */
 @media (max-width: 1100px) {
+  .span.depoimento-nome{
+    font-weight: bold;
+  }
   .canva-carousel-container {
     display: flex;
     align-items: center;
