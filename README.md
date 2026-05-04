@@ -1,24 +1,30 @@
-# 💅 Corpo & Pele – Estética e Lazer
+# Corpo & Pele – Estética e Lazer
 
-Site institucional criado para uma empresa real do ramo de estética. A proposta foi oferecer uma navegação simples e direta, com foco nos serviços oferecidos e na experiência do cliente.
+Landing page institucional desenvolvida para uma cliente real do ramo de estética, com foco na captação de clientes e contato direto via WhatsApp.
+
+
+## 👨‍💼 Contexto
+
+Projeto desenvolvido sob demanda para uma cliente real, seguindo requisitos específicos definidos durante o processo de desenvolvimento.
 
 ## 📌 Objetivo
 
-Oferecer uma vitrine digital para a empresa **Corpo & Pele Estética e Lazer**, com informações relevantes sobre os serviços e contato.
+Desenvolver uma presença digital para a empresa Corpo & Pele Estética e Lazer, facilitando a apresentação dos serviços e a conversão de visitantes em clientes.
 
 ## 🔧 Tecnologias utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
-- Vercel (deploy)
+HTML5
+CSS3
+JavaScript
+Vercel (deploy)
+React.js
 
 ## ⚙️ Funcionalidades
 
 - Apresentação dos serviços oferecidos
-- Seção de depoimentos com carrossel
-- Botão de agendamento pelo WhatsApp
-- Layout adaptável (responsivo)
+- Carrossel de depoimentos desenvolvido em JavaScript
+- Integração com WhatsApp para contato direto
+- Layout responsivo para diferentes dispositivos
 
 ## 🌐 Link online
 
@@ -26,10 +32,13 @@ Oferecer uma vitrine digital para a empresa **Corpo & Pele Estética e Lazer**, 
 
 ## 📈 Resultados
 
-Este site está **em uso por um cliente real**, ajudando na divulgação dos serviços de estética da empresa.
+O site está em uso por um cliente real, sendo utilizado como canal digital para apresentação dos serviços e contato com clientes, contribuindo para a captação de novos atendimentos.
 
 ## 🧠 Aprendizados
 
-- Aplicação prática para clientes reais
-- Foco na usabilidade e estética visual
-- Deploy com Vercel e ajustes em produção
+- Levantamento e implementação de requisitos de cliente
+- Desenvolvimento com foco em usabilidade e conversão
+- Deploy em produção utilizando Vercel
+
+## 📸 Preview
+
