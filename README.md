@@ -42,6 +42,6 @@ O site está em uso por um cliente real, sendo utilizado como canal digital para
 
 ## 📸 Preview
 
-![Sobre](./public/home.png)
-![Serviços](./public/services.png)
-![Formulario](./public/form.png)
+![Sobre](./public/images/home.png)
+![Serviços](./public/images/services.png)
+![Formulario](./public/images/form.png)
