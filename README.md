@@ -43,7 +43,7 @@ O site está em uso por um cliente real, sendo utilizado como canal digital para
 ## 📸 Preview
 
 ### 🏠 Sobre
-![Sobre](public/images/home.png)
+![Sobre](https://raw.githubusercontent.com/caiocvo/clinica-bioestetica/main/bioestetica-site/public/images/home.png)
 
 ### 💼 Serviços
 ![Serviços](public/images/services.png)
