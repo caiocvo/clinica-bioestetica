@@ -46,7 +46,7 @@ O site está em uso por um cliente real, sendo utilizado como canal digital para
 ![Sobre](https://raw.githubusercontent.com/caiocvo/clinica-bioestetica/main/bioestetica-site/public/images/home.png)
 
 ### 💼 Serviços
-![Serviços](public/images/services.png)
+![Serviços](https://raw.githubusercontent.com/caiocvo/clinica-bioestetica/main/bioestetica-site/public/images/services.png)
 
 ### 📞 Formulário
-![Formulário](public/images/form.png)
+![Formulário](https://raw.githubusercontent.com/caiocvo/clinica-bioestetica/main/bioestetica-site/public/images/form.png)
